@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Counter</title>
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #counter {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click Counter</h1>
+    <button id="clickButton">Click me</button>
+    <div id="counter">Click count: <span id="clickCount">0</span></div>
+
+    <script>
+        var clickCount = 0;
+        var clickButton = document.getElementById('clickButton');
+        var clickCounter = document.getElementById('clickCount');
+
+        clickButton.addEventListener('click', function() {
+            clickCount++;
+            clickCounter.textContent = clickCount;
+        });
+    </script>
+</body>
+</html>
